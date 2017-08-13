@@ -13,7 +13,7 @@ var xpath = require('xpath');
 var dom = require('xmldom').DOMParser;
 var cheerio = require('cheerio');
 
-var nfceParser = require('./nfce-parser');
+var nfceParser = require('./lib/nfce-parser');
 
 module.exports = {
 	nfceGO: function(key) {

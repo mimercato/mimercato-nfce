@@ -5,7 +5,7 @@ var should = chai.should();
 var mimercatoNfce = require('../index');
 var nfceGO = mimercatoNfce.nfceGO;
 
-var nfceParser = require('../nfce-parser');
+var nfceParser = require('../lib/nfce-parser');
 
 describe('#NFCe-parser', function() {
 	it('Invalid state of query selector', function(done) {
