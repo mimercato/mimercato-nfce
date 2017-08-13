@@ -23,8 +23,11 @@ jobs:
             sudo tar xvjf phantomjs-2.1.1-linux-x86_64.tar.bz2 -C /usr/local/share/
             sudo ln -s /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin/
       - run:
-          name: Verify phantomjs version
-          command: 'phantomjs --version'
+          name: "Checking Versions"
+          command: |
+            node --version
+            npm --version
+            phantomjs --version
       #- save_cache:
       #    key: dependency-cache-{{ checksum "package.json" }}
       #    paths:
