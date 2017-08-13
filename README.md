@@ -5,22 +5,44 @@
 [![Build Status](https://travis-ci.com/phelipealves/mimercato-nfce.svg?token=sjQEfNaGu5jbKdMKXFeX&branch=master)](https://travis-ci.com/phelipealves/mimercato-nfce)
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/mimercato-nfce/mimercato-nfce)
 
-Download
+## Dependencies
+
+### Install Nodejs 7 [via package-manager](https://nodejs.org/en/download/package-manager/):
+```
+curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+```
+```
+sudo apt-get install -y build-essential
+```
+
+### Install phamtonjs 2 [on ubuntu](https://gist.github.com/phelipealves/9cd14402ecbf93ef9715e3268362358c#file-00-howto_install_phantomjs-md):
+```
+sudo apt-get install build-essential chrpath libssl-dev libxft-dev libfreetype6-dev libfreetype6 libfontconfig1-dev libfontconfig1 -y
+```
+```
+sudo wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
+```
+```
+sudo tar xvjf phantomjs-2.1.1-linux-x86_64.tar.bz2 -C /usr/local/share/
+```
+```
+sudo ln -s /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin/
+```
+## Run project
+### Download
 ```
 git clone https://github.com/phelipealves/mimercato-nfce.git
 ```
-
-Open directory
 ```
 cd mimercato-nfce
 ```
 
-Instalation
+### Install npm dependencies.
 ```
 npm install
 ```
 
-Test
+### Test
 ```
 npm test
 ```
