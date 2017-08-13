@@ -48,3 +48,7 @@ workflows:
           filters:
             branches:
               only: master
+              
+notify:
+  webhooks:
+    - url: https://webhooks.gitter.im/e/acd950313416a46611a2
