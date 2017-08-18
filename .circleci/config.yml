@@ -10,6 +10,9 @@ jobs:
       - run:
           name: Update npm
           command: 'sudo npm install -g npm@latest'
+      - run:
+          name: Clear node modules
+          command: 'sudo rm -rf /usr/local/lib/node_modules'
       #- restore_cache:
       #    key: dependency-cache-{{ checksum "package.json" }}     
       - run:
@@ -23,8 +26,8 @@ jobs:
           name: "Checking Versions"
           command: |
             node --version
-            npm --version
-            phantomjs --version
+#            npm --version
+#            phantomjs --version
       - run:
           name: Install npm
           command: 'npm install'
