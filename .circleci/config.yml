@@ -5,6 +5,9 @@ jobs:
     # The primary container is an instance of the first list image listed. Your build commands run in this container.
     docker:
       - image: circleci/node:7.10
+    machine:
+      pre:
+        - sudo curl --output /usr/local/bin/phantomjs https://s3.amazonaws.com/circle-downloads/phantomjs-2.1.1
     steps:
       - checkout
       - run:
@@ -15,7 +18,7 @@ jobs:
       - run:
           name: Install phantomjs
           command: |
-            sudo apt-get install build-essential phantomjs
+            sudo apt-get install build-essential
       - run:
           name: "Checking Versions"
           command: |
