@@ -24,17 +24,8 @@
   },
   "homepage": "https://github.com/phelipealves/mimercato-nfce#readme",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.2",
-    "crawler": "^1.0.5",
-    "jsdom": "^11.1.0",
-    "osmosis": "^1.1.4",
-    "parse5": "^3.0.2",
     "phantom": "^4.0.5",
-    "phantomjs-prebuilt": "^2.1.14",
-    "typescript-compiler": "^1.4.1",
-    "xmldom": "^0.1.27",
-    "xmlserializer": "^0.6.0",
-    "xpath": "0.0.24"
+    "phantomjs-prebuilt": "^2.1.14"
   },
   "devDependencies": {
     "chai": "4.1.1",
