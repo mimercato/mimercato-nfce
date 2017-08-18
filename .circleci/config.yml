@@ -26,8 +26,8 @@ jobs:
             npm --version
             phantomjs --version
       - run:
-        name: Install npm
-        command: 'npm install'
+          name: Install npm
+          command: 'npm install'
       #- save_cache:
       #    key: dependency-cache-{{ checksum "package.json" }}
       #    paths:
