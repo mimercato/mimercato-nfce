@@ -26,6 +26,10 @@ jobs:
 #            npm --version
 #            phantomjs --version
       - run:
+          name: "Removing node_modules"
+          command: |
+            sudo rm -rf node_modules
+      - run:
           name: Install npm
           command: 'npm install'
       #- save_cache:
