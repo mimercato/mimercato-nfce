@@ -16,9 +16,9 @@ jobs:
           name: Install phantomjs
           command: |
             sudo apt-get install build-essential chrpath libssl-dev libxft-dev libfreetype6-dev libfreetype6 libfontconfig1-dev libfontconfig1 -y
-            mkdir -p /home/ubuntu/.phantomjs/2.1.1/x86_64-linux/bin
-            curl --output /home/ubuntu/.phantomjs/2.1.1/x86_64-linux/bin/phantomjs https://s3.amazonaws.com/circle-downloads/phantomjs-2.1.1
-            chmod ugo+x /home/ubuntu/.phantomjs/2.1.1/x86_64-linux/bin/phantomjs
+            sudo mkdir -p /home/ubuntu/.phantomjs/2.1.1/x86_64-linux/bin
+            sudo curl --output /home/ubuntu/.phantomjs/2.1.1/x86_64-linux/bin/phantomjs https://s3.amazonaws.com/circle-downloads/phantomjs-2.1.1
+            sudo chmod ugo+x /home/ubuntu/.phantomjs/2.1.1/x86_64-linux/bin/phantomjs
       - run:
           name: "Checking Versions"
           command: |
