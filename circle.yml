@@ -1,4 +1,6 @@
 machine:
+  pre:
+    - sudo curl --output /usr/local/bin/phantomjs https://s3.amazonaws.com/circle-downloads/phantomjs-2.1.1
   node:
     version: v8.1.4
 
@@ -8,7 +10,4 @@ dependencies:
 
 test:
   post:
-    - node -v
-    - npm -v
-    - phantomjs -v
     - npm test
