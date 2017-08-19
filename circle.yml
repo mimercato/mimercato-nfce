@@ -1,0 +1,14 @@
+machine:
+  node:
+    version: v8.1.4
+
+dependencies:
+  override:
+    - npm install
+
+test:
+  post:
+    - node -v
+    - npm -v
+    - phantomjs -v
+    - npm test
