@@ -24,6 +24,14 @@ sudo npm install -g npm@latest
 ```
 
 ### Install phamtonjs 2 [on ubuntu](https://gist.github.com/phelipealves/9cd14402ecbf93ef9715e3268362358c#file-00-howto_install_phantomjs-md):
+
+phantomjs 2.1.1 is now currently bundled with 16.04:
+```
+sudo apt-get install phantomjs
+```
+
+or
+
 ```
 sudo apt-get install build-essential chrpath libssl-dev libxft-dev libfreetype6-dev libfreetype6 libfontconfig1-dev libfontconfig1 -y
 ```
