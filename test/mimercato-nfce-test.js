@@ -3,12 +3,12 @@ var chai = require('chai')
 var expect = chai.expect
 
 // -------
-var nfceParser = require('../lib/nfce-parser');
+var mimercatoNFCe = require('../lib/mimercato-nfce');
 
 // tests
 describe('#NFCe-parser', function() {
 	it('Invalid state of query selector', function(done) {
-		expect(nfceParser.nfceQuerySelector('BR')).to.equal('Select a valid state of Brazil.');
+		expect(mimercatoNFCe.nfceQuery('BR')).to.equal('Select a valid state of Brazil.');
 		done();
 	});
 });

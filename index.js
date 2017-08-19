@@ -7,7 +7,7 @@
  * Licensed under the MIT license.
  */
 
-var nfceParser = require('./lib/nfce-parser');
+var nfceParser = require('./lib/mimercato-nfce');
 
 module.exports = {
 	nfceGO: function(key) {
@@ -16,7 +16,7 @@ module.exports = {
 		}
 		url = 'http://nfe.sefaz.go.gov.br/nfeweb/jsp/CConsultaCompletaNFEJSF.jsf?parametroChaveAcesso='+key;
 		return new Promise((resolve, reject) => {
-			nfceParser.getNfce(url, nfceParser.nfceQuerySelector('GO')).then(nfce => {
+			nfceParser.getNfce(url, nfceParser.nfceQuery('GO'), true).then(nfce => {
 				resolve(nfce);
 			});
 		});

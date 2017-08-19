@@ -42,6 +42,45 @@ exports.emitente = {
     "codigoRegimeTributario":"3 – Regime Normal"
 }
 
+exports.impostos = {
+    "baseICMS":"26,87",
+    "icmsValor":"3,54",
+    "icmsDesonerado":"0,00",
+    "icmsST":"0,00",
+    "icmsSubs":"0,00",
+    "totalProdutos":"38,75",
+    "totalFrete":"0,00",
+    "totalSeguro":"0,00",
+    "despesasAcessorias":"0,00",
+    "totalIPI":"0,00",
+    "totalNFE":"38,75",
+    "totalDescontos":"0,00",
+    "totalII":"0,00",
+    "pis":"0,08",
+    "cofins":"0,37",
+    "tributosAprox":"0,00",
+    "icmsFCP":null,
+    "icmsIntUfDest":null,
+    "icmsIntUfremet":null
+}
+
+exports.transporte = {
+    "modalidade": "9-sem frete"
+}
+
+exports.info = {
+    "formatoImpressao":"4 - DANFE NFC-e",
+    "formatoEmissao":"1",
+    "digitoVerificador":"5",
+    "identifacaoAmbiente":"1 – Produção",
+    "finalidade":"1",
+    "processo":"0",
+    "versao":"1.02.53",
+    "entradaContigencia":null,
+    "justificativa":null,
+    "descricao":null
+}
+
 exports.produtos = [
     {
         "aliquotaICMS":"12,00",

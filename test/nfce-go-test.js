@@ -3,8 +3,7 @@ var chai = require('chai')
 var expect = chai.expect
 
 // ------
-var mimercatoNfce = require('../index');
-var nfceGO = mimercatoNfce.nfceGO;
+var nfceGO = require('../index').nfceGO;
 
 // data
 var go_data = require('./data/expected-go-data')
@@ -14,91 +13,92 @@ describe('#NFCe-GO', function() {
 	var expect_data;
 	
 	before(function(done){
+		expect_data = go_data
+		// get nfce
 		nfceGO('52170826969401000148650040000140431040188685').then(nfce => {
-			nfceObj = nfce;
-			expect_data = go_data
+			nfceObj = nfce;			
 			done();
-		});
+		});		
 	});
 	
-	describe('NFCe', function() {
-		it('NFCe-modelo', function(done) {
+	describe('NFCe-nfe', function() {
+		it('modelo', function(done) {
 			expect(nfceObj.nfe.modelo).to.equal(expect_data.nfe.modelo);
 			done();
 		});
-		it('NFCe-serie', function(done) {
+		it('serie', function(done) {
 			expect(nfceObj.nfe.serie).to.equal(expect_data.nfe.serie);
 			done();
 		});
-		it('NFCe-numero', function(done) {
+		it('numero', function(done) {
 			expect(nfceObj.nfe.numero).to.equal(expect_data.nfe.numero);
 			done();
 		});
-		it('NFCe-dataEmissao', function(done) {
+		it('dataEmissao', function(done) {
 			expect(nfceObj.nfe.dataEmissao).to.equal(expect_data.nfe.dataEmissao);
 			done();
 		});
-		it('NFCe-valor', function(done) {
+		it('valor', function(done) {
 			expect(nfceObj.nfe.valor).to.equal(expect_data.nfe.valor);
 			done();
 		});
-		it('NFCe-cnpj', function(done) {
+		it('cnpj', function(done) {
 			expect(nfceObj.nfe.cnpj).to.equal(expect_data.nfe.cnpj);
 			done();
 		});
-		it('NFCe-nome', function(done) {
+		it('nome', function(done) {
 			expect(nfceObj.nfe.nome).to.equal(expect_data.nfe.nome);
 			done();
 		});
-		it('NFCe-inscricaoEstadual', function(done) {
+		it('inscricaoEstadual', function(done) {
 			expect(nfceObj.nfe.inscricaoEstadual).to.equal(expect_data.nfe.inscricaoEstadual);
 			done();
 		});
-		it('NFCe-uf', function(done) {
+		it('uf', function(done) {
 			expect(nfceObj.nfe.uf).to.equal(expect_data.nfe.uf);
 			done();
 		});
-		it('NFCe-processo', function(done) {
+		it('processo', function(done) {
 			expect(nfceObj.nfe.processo).to.equal(expect_data.nfe.processo);
 			done();
 		});
-		it('NFCe-processoVer', function(done) {
+		it('processoVer', function(done) {
 			expect(nfceObj.nfe.processoVer).to.equal(expect_data.nfe.processoVer);
 			done();
 		});
-		it('NFCe-tipoEmissao', function(done) {
+		it('tipoEmissao', function(done) {
 			expect(nfceObj.nfe.tipoEmissao).to.equal(expect_data.nfe.tipoEmissao);
 			done();
 		});
-		it('NFCe-finalidade', function(done) {
+		it('finalidade', function(done) {
 			expect(nfceObj.nfe.finalidade).to.equal(expect_data.nfe.finalidade);
 			done();
 		});
-		it('NFCe-natureza', function(done) {
+		it('natureza', function(done) {
 			expect(nfceObj.nfe.natureza).to.equal(expect_data.nfe.natureza);
 			done();
 		});
-		it('NFCe-tipoOperacao', function(done) {
+		it('tipoOperacao', function(done) {
 			expect(nfceObj.nfe.tipoOperacao).to.equal(expect_data.nfe.tipoOperacao);
 			done();
 		});
-		it('NFCe-formaPagamento', function(done) {
+		it('formaPagamento', function(done) {
 			expect(nfceObj.nfe.formaPagamento).to.equal(expect_data.nfe.formaPagamento);
 			done();
 		});
-		it('NFCe-digest', function(done) {
+		it('digest', function(done) {
 			expect(nfceObj.nfe.digest).to.equal(expect_data.nfe.digest);
 			done();
 		});
-		it('NFCe-eventos', function(done) {
+		it('eventos', function(done) {
 			expect(nfceObj.nfe.eventos).to.equal(expect_data.nfe.eventos);
 			done();
 		});
-		it('NFCe-protocolo', function(done) {
+		it('protocolo', function(done) {
 			expect(nfceObj.nfe.protocolo).to.equal(expect_data.nfe.protocolo);
 			done();
 		});
-		it('NFCe-dataAutorizacao', function(done) {
+		it('dataAutorizacao', function(done) {
 			expect(nfceObj.nfe.dataAutorizacao).to.equal(expect_data.nfe.dataAutorizacao);
 			done();
 		});
@@ -176,154 +176,283 @@ describe('#NFCe-GO', function() {
 			expect(nfceObj.produtos.length).to.equal(12);
 			done();
 		});
-		it('aliquotaICMS Test', function(done) {
+		it('aliquotaICMS', function(done) {
 			expect_data.produtos.forEach(function(product, i) {
 				expect(nfceObj.produtos[i].aliquotaICMS).to.equal(product.aliquotaICMS);				
 			});
 			done();
 		});
-		it('baseCalculoICMS Test', function(done) {
+		it('baseCalculoICMS', function(done) {
 			expect_data.produtos.forEach(function(product, i) {
 				expect(nfceObj.produtos[i].baseCalculoICMS).to.equal(product.baseCalculoICMS);				
 			});
 			done();
 		});
-		it('cfop Test', function(done) {
+		it('cfop', function(done) {
 			expect_data.produtos.forEach(function(product, i) {
 				expect(nfceObj.produtos[i].cfop).to.equal(product.cfop);
 			});
 			done();
 		});
-		it('codigo Test', function(done) {
+		it('codigo', function(done) {
 			expect_data.produtos.forEach(function(product, i) {
 				expect(nfceObj.produtos[i].codigo).to.equal(product.codigo);
 			});
 			done();
 		});
-		it('codigoEANComercial Test', function(done) {
+		it('codigoEANComercial', function(done) {
 			expect_data.produtos.forEach(function(product, i) {
 				expect(nfceObj.produtos[i].codigoEANComercial).to.equal(product.codigoEANComercial);
 			});
 			done();
 		});
-		it('codigoEANTributavel Test', function(done) {
+		it('codigoEANTributavel', function(done) {
 			expect_data.produtos.forEach(function(product, i) {
 				expect(nfceObj.produtos[i].codigoEANTributavel).to.equal(product.codigoEANTributavel);
 			});
 			done();
 		});
-		it('codigoNCM Test', function(done) {
+		it('codigoNCM', function(done) {
 			expect_data.produtos.forEach(function(product, i) {
 				expect(nfceObj.produtos[i].codigoNCM).to.equal(product.codigoNCM);
 			});
 			done();
 		});
-		it('confinsCST Test', function(done) {
+		it('confinsCST', function(done) {
 			expect_data.produtos.forEach(function(product, i) {
 				expect(nfceObj.produtos[i].confinsCST).to.equal(product.confinsCST);
 			});
 			done();
 		});
-		it('descricao Test', function(done) {
+		it('descricao', function(done) {
 			expect_data.produtos.forEach(function(product, i) {
 				expect(nfceObj.produtos[i].descricao).to.equal(product.descricao);
 			});
 			done();
 		});
-		it('indicadorComposicao Test', function(done) {
+		it('indicadorComposicao', function(done) {
 			expect_data.produtos.forEach(function(product, i) {
 				expect(nfceObj.produtos[i].indicadorComposicao).to.equal(product.indicadorComposicao);
 			});
 			done();
 		});
-		it('modalidadeICMS Test', function(done) {
+		it('modalidadeICMS', function(done) {
 			expect_data.produtos.forEach(function(product, i) {
 				expect(nfceObj.produtos[i].modalidadeICMS).to.equal(product.modalidadeICMS);
 			});
 			done();
 		});
-		it('origemMercadoria Test', function(done) {
+		it('origemMercadoria', function(done) {
 			expect_data.produtos.forEach(function(product, i) {
 				expect(nfceObj.produtos[i].origemMercadoria).to.equal(product.origemMercadoria);
 			});
 			done();
 		});
-		it('pisCST Test', function(done) {
+		it('pisCST', function(done) {
 			expect_data.produtos.forEach(function(product, i) {
 				expect(nfceObj.produtos[i].pisCST).to.equal(product.pisCST);
 			});
 			done();
 		});
-		it('quantidade Test', function(done) {
+		it('quantidade', function(done) {
 			expect_data.produtos.forEach(function(product, i) {
 				expect(nfceObj.produtos[i].quantidade).to.equal(product.quantidade);
 			});
 			done();
 		});
-		it('quantidadeComercial Test', function(done) {
+		it('quantidadeComercial', function(done) {
 			expect_data.produtos.forEach(function(product, i) {
 				expect(nfceObj.produtos[i].quantidadeComercial).to.equal(product.quantidadeComercial);
 			});
 			done();
 		});
-		it('quantidadeTributavel Test', function(done) {
+		it('quantidadeTributavel', function(done) {
 			expect_data.produtos.forEach(function(product, i) {
 				expect(nfceObj.produtos[i].quantidadeTributavel).to.equal(product.quantidadeTributavel);
 			});
 			done();
 		});
-		it('tributacaoICMS Test', function(done) {
+		it('tributacaoICMS', function(done) {
 			expect_data.produtos.forEach(function(product, i) {
 				expect(nfceObj.produtos[i].tributacaoICMS).to.equal(product.tributacaoICMS);
 			});
 			done();
 		});
-		it('unidade Test', function(done) {
+		it('unidade', function(done) {
 			expect_data.produtos.forEach(function(product, i) {
 				expect(nfceObj.produtos[i].unidade).to.equal(product.unidade);
 			});
 			done();
 		});
-		it('unidadeComercial Test', function(done) {
+		it('unidadeComercial', function(done) {
 			expect_data.produtos.forEach(function(product, i) {
 				expect(nfceObj.produtos[i].unidadeComercial).to.equal(product.unidadeComercial);
 			});
 			done();
 		});
-		it('unidadeTributavel Test', function(done) {
+		it('unidadeTributavel', function(done) {
 			expect_data.produtos.forEach(function(product, i) {
 				expect(nfceObj.produtos[i].unidadeTributavel).to.equal(product.unidadeTributavel);
 			});
 			done();
 		});
-		it('valor Test', function(done) {
+		it('valor', function(done) {
 			expect_data.produtos.forEach(function(product, i) {
 				expect(nfceObj.produtos[i].valor).to.equal(product.valor);
 			});
 			done();
 		});
-		it('valorAproxTributos Test', function(done) {
+		it('valorAproxTributos', function(done) {
 			expect_data.produtos.forEach(function(product, i) {
 				expect(nfceObj.produtos[i].valorAproxTributos).to.equal(product.valorAproxTributos);
 			});
 			done();
 		});
-		it('valorICMS Test', function(done) {
+		it('valorICMS', function(done) {
 			expect_data.produtos.forEach(function(product, i) {
 				expect(nfceObj.produtos[i].valorICMS).to.equal(product.valorICMS);
 			});
 			done();
 		});
-		it('valorUnitarioComercial Test', function(done) {
+		it('valorUnitarioComercial', function(done) {
 			expect_data.produtos.forEach(function(product, i) {
 				expect(nfceObj.produtos[i].valorUnitarioComercial).to.equal(product.valorUnitarioComercial);
 			});
 			done();
 		});
-		it('valorUnitarioTributavel Test', function(done) {
+		it('valorUnitarioTributavel', function(done) {
 			expect_data.produtos.forEach(function(product, i) {
 				expect(nfceObj.produtos[i].valorUnitarioTributavel).to.equal(product.valorUnitarioTributavel);
 			});
+			done();
+		});
+	});
+
+	describe('NFCe-impostos', function() {
+		it('baseICMS', function(done) {
+			expect(nfceObj.impostos.baseICMS).to.equal(expect_data.impostos.baseICMS);
+			done();
+		});
+		it('icmsValor', function(done) {
+			expect(nfceObj.impostos.icmsValor).to.equal(expect_data.impostos.icmsValor);
+			done();
+		});
+		it('icmsDesonerado', function(done) {
+			expect(nfceObj.impostos.icmsDesonerado).to.equal(expect_data.impostos.icmsDesonerado);
+			done();
+		});
+		it('icmsST', function(done) {
+			expect(nfceObj.impostos.icmsST).to.equal(expect_data.impostos.icmsST);
+			done();
+		});
+		it('icmsSubs', function(done) {
+			expect(nfceObj.impostos.icmsSubs).to.equal(expect_data.impostos.icmsSubs);
+			done();
+		});
+		it('totalProdutos', function(done) {
+			expect(nfceObj.impostos.totalProdutos).to.equal(expect_data.impostos.totalProdutos);
+			done();
+		});
+		it('totalFrete', function(done) {
+			expect(nfceObj.impostos.totalFrete).to.equal(expect_data.impostos.totalFrete);
+			done();
+		});
+		it('totalSeguro', function(done) {
+			expect(nfceObj.impostos.totalSeguro).to.equal(expect_data.impostos.totalSeguro);
+			done();
+		});
+		it('despesasAcessorias', function(done) {
+			expect(nfceObj.impostos.despesasAcessorias).to.equal(expect_data.impostos.despesasAcessorias);
+			done();
+		});
+		it('totalIPI', function(done) {
+			expect(nfceObj.impostos.totalIPI).to.equal(expect_data.impostos.totalIPI);
+			done();
+		});
+		it('totalNFE', function(done) {
+			expect(nfceObj.impostos.totalNFE).to.equal(expect_data.impostos.totalNFE);
+			done();
+		});
+		it('totalDescontos', function(done) {
+			expect(nfceObj.impostos.totalDescontos).to.equal(expect_data.impostos.totalDescontos);
+			done();
+		});
+		it('totalII', function(done) {
+			expect(nfceObj.impostos.totalII).to.equal(expect_data.impostos.totalII);
+			done();
+		});
+		it('pis', function(done) {
+			expect(nfceObj.impostos.pis).to.equal(expect_data.impostos.pis);
+			done();
+		});
+		it('cofins', function(done) {
+			expect(nfceObj.impostos.cofins).to.equal(expect_data.impostos.cofins);
+			done();
+		});
+		it('tributosAprox', function(done) {
+			expect(nfceObj.impostos.tributosAprox).to.equal(expect_data.impostos.tributosAprox);
+			done();
+		});
+		it('icmsFCP', function(done) {
+			expect(nfceObj.impostos.icmsFCP).to.equal(expect_data.impostos.icmsFCP);
+			done();
+		});
+		it('icmsIntUfDest', function(done) {
+			expect(nfceObj.impostos.icmsIntUfDest).to.equal(expect_data.impostos.icmsIntUfDest);
+			done();
+		});
+		it('icmsIntUfremet', function(done) {
+			expect(nfceObj.impostos.icmsIntUfremet).to.equal(expect_data.impostos.icmsIntUfremet);
+			done();
+		});
+	});
+
+	describe('NFCe-transporte', function() {
+		it('modalidade', function(done) {
+			expect(nfceObj.transporte.modalidade).to.equal(expect_data.transporte.modalidade);
+			done();
+		});
+	});
+
+	describe('NFCe-info', function() {
+		it('formatoImpressao', function(done) {
+			expect(nfceObj.info.formatoImpressao).to.equal(expect_data.info.formatoImpressao);
+			done();
+		});
+		it('formatoEmissao', function(done) {
+			expect(nfceObj.info.formatoEmissao).to.equal(expect_data.info.formatoEmissao);
+			done();
+		});
+		it('digitoVerificador', function(done) {
+			expect(nfceObj.info.digitoVerificador).to.equal(expect_data.info.digitoVerificador);
+			done();
+		});
+		it('identifacaoAmbiente', function(done) {
+			expect(nfceObj.info.identifacaoAmbiente).to.equal(expect_data.info.identifacaoAmbiente);
+			done();
+		});
+		it('finalidade', function(done) {
+			expect(nfceObj.info.finalidade).to.equal(expect_data.info.finalidade);
+			done();
+		});
+		it('processo', function(done) {
+			expect(nfceObj.info.processo).to.equal(expect_data.info.processo);
+			done();
+		});
+		it('versao', function(done) {
+			expect(nfceObj.info.versao).to.equal(expect_data.info.versao);
+			done();
+		});
+		it('entradaContigencia', function(done) {
+			expect(nfceObj.info.entradaContigencia).to.equal(expect_data.info.entradaContigencia);
+			done();
+		});
+		it('justificativa', function(done) {
+			expect(nfceObj.info.justificativa).to.equal(expect_data.info.justificativa);
+			done();
+		});
+		it('descricao', function(done) {
+			expect(nfceObj.info.descricao).to.equal(expect_data.info.descricao);
 			done();
 		});
 	});
