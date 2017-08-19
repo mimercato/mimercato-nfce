@@ -25,7 +25,6 @@ before_install:
   - npm i -g npm@latest
 
 install:
-  - "phantomjs --version"
   - "npm install"
 
 script:
