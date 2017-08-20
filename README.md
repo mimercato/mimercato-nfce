@@ -6,6 +6,9 @@
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/mimercato-nfce/mimercato-nfce)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
+[Chat room](https://appear.in/mimercato)
+[<img src='https://dl.dropboxusercontent.com/s/suezj117j0cggq0/appear.in.svg' height='28' alt='appear.in premium'>](https://appear.in/mimercato)
+
 ## Dependencies
 
 ### Install Nodejs 7 [via package-manager](https://nodejs.org/en/download/package-manager/):
