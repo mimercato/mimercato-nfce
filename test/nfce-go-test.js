@@ -15,7 +15,7 @@ describe('#NFCe-GO', function() {
 	before(function(done){
 		expect_data = go_data
 		// get nfce
-		nfceGO('52170826969401000148650040000140431040188685').then(nfce => {
+		nfceGO('52170826969401000148650040000140431040188685', true).then(nfce => {
 			nfceObj = nfce;			
 			done();
 		});		
@@ -456,5 +456,5 @@ describe('#NFCe-GO', function() {
 			done();
 		});
 	});
-	
+
 });

@@ -10,13 +10,13 @@
 var nfceParser = require('./lib/mimercato-nfce');
 
 module.exports = {
-	nfceGO: function(key) {
+	nfceGO: function(key, logging=false) {
 		if (!key) {
 			return '';
 		}
 		url = 'http://nfe.sefaz.go.gov.br/nfeweb/jsp/CConsultaCompletaNFEJSF.jsf?parametroChaveAcesso='+key;
 		return new Promise((resolve, reject) => {
-			nfceParser.getNfce(url, nfceParser.nfceQuery('GO'), true).then(nfce => {
+			nfceParser.getNfce(url, nfceParser.nfceQuery('GO'), logging).then(nfce => {
 				resolve(nfce);
 			});
 		});
