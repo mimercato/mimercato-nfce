@@ -6,6 +6,9 @@
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/mimercato-nfce/mimercato-nfce)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
+[Chat room](https://appear.in/mimercato)
+[<img src='https://dl.dropboxusercontent.com/s/suezj117j0cggq0/appear.in.svg' height='28' alt='appear.in premium'>](https://appear.in/mimercato)
+
 ## Dependencies
 
 ### Install Nodejs 7 [via package-manager](https://nodejs.org/en/download/package-manager/):
@@ -24,6 +27,14 @@ sudo npm install -g npm@latest
 ```
 
 ### Install phamtonjs 2 [on ubuntu](https://gist.github.com/phelipealves/9cd14402ecbf93ef9715e3268362358c#file-00-howto_install_phantomjs-md):
+
+phantomjs 2.1.1 is now currently bundled with 16.04:
+```
+sudo apt-get install phantomjs
+```
+
+or
+
 ```
 sudo apt-get install build-essential chrpath libssl-dev libxft-dev libfreetype6-dev libfreetype6 libfontconfig1-dev libfontconfig1 -y
 ```
