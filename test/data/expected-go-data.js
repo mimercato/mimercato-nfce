@@ -1,3 +1,10 @@
+
+exports.geral = {
+	"chaveNFe":"52170826969401000148650040000140431040188685",
+	"numero":"14043",
+	"versaoXML":"3.10"
+}
+
 exports.nfe = {
     "modelo":"65",
     "serie":"4",
@@ -42,6 +49,23 @@ exports.emitente = {
     "codigoRegimeTributario":"3 – Regime Normal"
 }
 
+exports.destinatario = {
+	"nome": null,
+	"cnpj_cpf": null,
+	"endereco": '',
+	"bairro": null,
+	"cep": null,
+	"cidade": null,
+	"telefone": null,
+	"uf": null,
+	"pais": null,
+	"indicadorIE": null,
+	"inscricaoEstadual": null,
+	"inscricaoSuframa": null,
+	"im": null,
+	"email": null
+}
+
 exports.impostos = {
     "baseICMS":"26,87",
     "icmsValor":"3,54",
@@ -67,6 +91,8 @@ exports.impostos = {
 exports.transporte = {
     "modalidade": "9-sem frete"
 }
+
+exports.cobranca = null
 
 exports.info = {
     "formatoImpressao":"4 - DANFE NFC-e",
