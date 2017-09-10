@@ -16,7 +16,7 @@ $ npm install mimercato-nfce
 var nfce = require('mimercato-nfce')
 
 var key = '52170826969401000148650040000140431040188685';
-nfce.nfceGO(nfceKey).then(nfce => {
+nfce.nfceGO(key).then(nfce => {
   console.log(nfce);
 });
 
