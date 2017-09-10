@@ -22,6 +22,12 @@ nfce.nfceGO(nfceKey).then(nfce => {
 
 ```
 
+- [x] GO - Goiás
+- [x] RS - Rio Grande do Sul
+- [ ] DF - Distrito Federal
+- [ ] SP - São Paulo
+- [ ] RJ - Rio de Janeiro
+
 ## Dependencies
 
 ### Install Nodejs 7 [via package-manager](https://nodejs.org/en/download/package-manager/):
