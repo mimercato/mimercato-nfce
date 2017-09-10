@@ -5,9 +5,22 @@
 [![Build Status](https://travis-ci.com/phelipealves/mimercato-nfce.svg?token=sjQEfNaGu5jbKdMKXFeX&branch=master)](https://travis-ci.com/phelipealves/mimercato-nfce)
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/mimercato-nfce/mimercato-nfce)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
-
 [Chat room](https://appear.in/mimercato)
 [<img src='https://dl.dropboxusercontent.com/s/suezj117j0cggq0/appear.in.svg' height='28' alt='appear.in premium'>](https://appear.in/mimercato)
+
+```
+$ npm install mimercato-nfce
+```
+
+```javascript
+var nfce = require('mimercato-nfce')
+
+var key = '52170826969401000148650040000140431040188685';
+nfce.nfceGO(nfceKey).then(nfce => {
+  console.log(nfce);
+});
+
+```
 
 ## Dependencies
 
