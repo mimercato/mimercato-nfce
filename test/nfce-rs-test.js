@@ -16,8 +16,7 @@ describe('#NFCe-RS', function() {
 		expect_data = rs_data
 
 		nfceRS('43151293015006000890651050000132661681112959', true).then(nfce => {
-			nfceObj = nfce;	
-			console.log(nfce);
+			nfceObj = nfce;
 			done();
 		});		
 	});
@@ -246,162 +245,162 @@ describe('#NFCe-RS', function() {
 		});
 	});
 	
-	// describe('NFCe-produtos', function() {
-	// 	it('Total of products expected', function(done) {
-	// 		expect(nfceObj.produtos.length).to.equal(12);
-	// 		done();	
-	// 	});
-	// 	it('aliquotaICMS', function(done) {
-	// 		expect_data.produtos.forEach(function(product, i) {
-	// 			expect(nfceObj.produtos[i].aliquotaICMS).to.equal(product.aliquotaICMS);				
-	// 		});
-	// 		done();
-	// 	});
-	// 	it('baseCalculoICMS', function(done) {
-	// 		expect_data.produtos.forEach(function(product, i) {
-	// 			expect(nfceObj.produtos[i].baseCalculoICMS).to.equal(product.baseCalculoICMS);				
-	// 		});
-	// 		done();
-	// 	});
-	// 	it('cfop', function(done) {
-	// 		expect_data.produtos.forEach(function(product, i) {
-	// 			expect(nfceObj.produtos[i].cfop).to.equal(product.cfop);
-	// 		});
-	// 		done();
-	// 	});
-	// 	it('codigo', function(done) {
-	// 		expect_data.produtos.forEach(function(product, i) {
-	// 			expect(nfceObj.produtos[i].codigo).to.equal(product.codigo);
-	// 		});
-	// 		done();
-	// 	});
-	// 	it('codigoEANComercial', function(done) {
-	// 		expect_data.produtos.forEach(function(product, i) {
-	// 			expect(nfceObj.produtos[i].codigoEANComercial).to.equal(product.codigoEANComercial);
-	// 		});
-	// 		done();
-	// 	});
-	// 	it('codigoEANTributavel', function(done) {
-	// 		expect_data.produtos.forEach(function(product, i) {
-	// 			expect(nfceObj.produtos[i].codigoEANTributavel).to.equal(product.codigoEANTributavel);
-	// 		});
-	// 		done();
-	// 	});
-	// 	it('codigoNCM', function(done) {
-	// 		expect_data.produtos.forEach(function(product, i) {
-	// 			expect(nfceObj.produtos[i].codigoNCM).to.equal(product.codigoNCM);
-	// 		});
-	// 		done();
-	// 	});
-	// 	it('confinsCST', function(done) {
-	// 		expect_data.produtos.forEach(function(product, i) {
-	// 			expect(nfceObj.produtos[i].confinsCST).to.equal(product.confinsCST);
-	// 		});
-	// 		done();
-	// 	});
-	// 	it('descricao', function(done) {
-	// 		expect_data.produtos.forEach(function(product, i) {
-	// 			expect(nfceObj.produtos[i].descricao).to.equal(product.descricao);
-	// 		});
-	// 		done();
-	// 	});
-	// 	it('indicadorComposicao', function(done) {
-	// 		expect_data.produtos.forEach(function(product, i) {
-	// 			expect(nfceObj.produtos[i].indicadorComposicao).to.equal(product.indicadorComposicao);
-	// 		});
-	// 		done();
-	// 	});
-	// 	it('modalidadeICMS', function(done) {
-	// 		expect_data.produtos.forEach(function(product, i) {
-	// 			expect(nfceObj.produtos[i].modalidadeICMS).to.equal(product.modalidadeICMS);
-	// 		});
-	// 		done();
-	// 	});
-	// 	it('origemMercadoria', function(done) {
-	// 		expect_data.produtos.forEach(function(product, i) {
-	// 			expect(nfceObj.produtos[i].origemMercadoria).to.equal(product.origemMercadoria);
-	// 		});
-	// 		done();
-	// 	});
-	// 	it('pisCST', function(done) {
-	// 		expect_data.produtos.forEach(function(product, i) {
-	// 			expect(nfceObj.produtos[i].pisCST).to.equal(product.pisCST);
-	// 		});
-	// 		done();
-	// 	});
-	// 	it('quantidade', function(done) {
-	// 		expect_data.produtos.forEach(function(product, i) {
-	// 			expect(nfceObj.produtos[i].quantidade).to.equal(product.quantidade);
-	// 		});
-	// 		done();
-	// 	});
-	// 	it('quantidadeComercial', function(done) {
-	// 		expect_data.produtos.forEach(function(product, i) {
-	// 			expect(nfceObj.produtos[i].quantidadeComercial).to.equal(product.quantidadeComercial);
-	// 		});
-	// 		done();
-	// 	});
-	// 	it('quantidadeTributavel', function(done) {
-	// 		expect_data.produtos.forEach(function(product, i) {
-	// 			expect(nfceObj.produtos[i].quantidadeTributavel).to.equal(product.quantidadeTributavel);
-	// 		});
-	// 		done();
-	// 	});
-	// 	it('tributacaoICMS', function(done) {
-	// 		expect_data.produtos.forEach(function(product, i) {
-	// 			expect(nfceObj.produtos[i].tributacaoICMS).to.equal(product.tributacaoICMS);
-	// 		});
-	// 		done();
-	// 	});
-	// 	it('unidade', function(done) {
-	// 		expect_data.produtos.forEach(function(product, i) {
-	// 			expect(nfceObj.produtos[i].unidade).to.equal(product.unidade);
-	// 		});
-	// 		done();
-	// 	});
-	// 	it('unidadeComercial', function(done) {
-	// 		expect_data.produtos.forEach(function(product, i) {
-	// 			expect(nfceObj.produtos[i].unidadeComercial).to.equal(product.unidadeComercial);
-	// 		});
-	// 		done();
-	// 	});
-	// 	it('unidadeTributavel', function(done) {
-	// 		expect_data.produtos.forEach(function(product, i) {
-	// 			expect(nfceObj.produtos[i].unidadeTributavel).to.equal(product.unidadeTributavel);
-	// 		});
-	// 		done();
-	// 	});
-	// 	it('valor', function(done) {
-	// 		expect_data.produtos.forEach(function(product, i) {
-	// 			expect(nfceObj.produtos[i].valor).to.equal(product.valor);
-	// 		});
-	// 		done();
-	// 	});
-	// 	it('valorAproxTributos', function(done) {
-	// 		expect_data.produtos.forEach(function(product, i) {
-	// 			expect(nfceObj.produtos[i].valorAproxTributos).to.equal(product.valorAproxTributos);
-	// 		});
-	// 		done();
-	// 	});
-	// 	it('valorICMS', function(done) {
-	// 		expect_data.produtos.forEach(function(product, i) {
-	// 			expect(nfceObj.produtos[i].valorICMS).to.equal(product.valorICMS);
-	// 		});
-	// 		done();
-	// 	});
-	// 	it('valorUnitarioComercial', function(done) {
-	// 		expect_data.produtos.forEach(function(product, i) {
-	// 			expect(nfceObj.produtos[i].valorUnitarioComercial).to.equal(product.valorUnitarioComercial);
-	// 		});
-	// 		done();
-	// 	});
-	// 	it('valorUnitarioTributavel', function(done) {
-	// 		expect_data.produtos.forEach(function(product, i) {
-	// 			expect(nfceObj.produtos[i].valorUnitarioTributavel).to.equal(product.valorUnitarioTributavel);
-	// 		});
-	// 		done();
-	// 	});
-	// });
+	describe('NFCe-produtos', function() {
+		it('Total of products expected', function(done) {
+			expect(nfceObj.produtos.length).to.equal(77);
+			done();	
+		});
+		it('aliquotaICMS', function(done) {
+			expect_data.produtos.forEach(function(product, i) {
+				expect(nfceObj.produtos[i].aliquotaICMS).to.equal(product.aliquotaICMS);				
+			});
+			done();
+		});
+		it('baseCalculoICMS', function(done) {
+			expect_data.produtos.forEach(function(product, i) {
+				expect(nfceObj.produtos[i].baseCalculoICMS).to.equal(product.baseCalculoICMS);				
+			});
+			done();
+		});
+		it('cfop', function(done) {
+			expect_data.produtos.forEach(function(product, i) {
+				expect(nfceObj.produtos[i].cfop).to.equal(product.cfop);
+			});
+			done();
+		});
+		it('codigo', function(done) {
+			expect_data.produtos.forEach(function(product, i) {
+				expect(nfceObj.produtos[i].codigo).to.equal(product.codigo);
+			});
+			done();
+		});
+		it('codigoEANComercial', function(done) {
+			expect_data.produtos.forEach(function(product, i) {
+				expect(nfceObj.produtos[i].codigoEANComercial).to.equal(product.codigoEANComercial);
+			});
+			done();
+		});
+		it('codigoEANTributavel', function(done) {
+			expect_data.produtos.forEach(function(product, i) {
+				expect(nfceObj.produtos[i].codigoEANTributavel).to.equal(product.codigoEANTributavel);
+			});
+			done();
+		});
+		it('codigoNCM', function(done) {
+			expect_data.produtos.forEach(function(product, i) {
+				expect(nfceObj.produtos[i].codigoNCM).to.equal(product.codigoNCM);
+			});
+			done();
+		});
+		it('confinsCST', function(done) {
+			expect_data.produtos.forEach(function(product, i) {
+				expect(nfceObj.produtos[i].confinsCST).to.equal(product.confinsCST);
+			});
+			done();
+		});
+		it('descricao', function(done) {
+			expect_data.produtos.forEach(function(product, i) {
+				expect(nfceObj.produtos[i].descricao).to.equal(product.descricao);
+			});
+			done();
+		});
+		it('indicadorComposicao', function(done) {
+			expect_data.produtos.forEach(function(product, i) {
+				expect(nfceObj.produtos[i].indicadorComposicao).to.equal(product.indicadorComposicao);
+			});
+			done();
+		});
+		it('modalidadeICMS', function(done) {
+			expect_data.produtos.forEach(function(product, i) {
+				expect(nfceObj.produtos[i].modalidadeICMS).to.equal(product.modalidadeICMS);
+			});
+			done();
+		});
+		it('origemMercadoria', function(done) {
+			expect_data.produtos.forEach(function(product, i) {
+				expect(nfceObj.produtos[i].origemMercadoria).to.equal(product.origemMercadoria);
+			});
+			done();
+		});
+		it('pisCST', function(done) {
+			expect_data.produtos.forEach(function(product, i) {
+				expect(nfceObj.produtos[i].pisCST).to.equal(product.pisCST);
+			});
+			done();
+		});
+		it('quantidade', function(done) {
+			expect_data.produtos.forEach(function(product, i) {
+				expect(nfceObj.produtos[i].quantidade).to.equal(product.quantidade);
+			});
+			done();
+		});
+		it('quantidadeComercial', function(done) {
+			expect_data.produtos.forEach(function(product, i) {
+				expect(nfceObj.produtos[i].quantidadeComercial).to.equal(product.quantidadeComercial);
+			});
+			done();
+		});
+		it('quantidadeTributavel', function(done) {
+			expect_data.produtos.forEach(function(product, i) {
+				expect(nfceObj.produtos[i].quantidadeTributavel).to.equal(product.quantidadeTributavel);
+			});
+			done();
+		});
+		it('tributacaoICMS', function(done) {
+			expect_data.produtos.forEach(function(product, i) {
+				expect(nfceObj.produtos[i].tributacaoICMS).to.equal(product.tributacaoICMS);
+			});
+			done();
+		});
+		it('unidade', function(done) {
+			expect_data.produtos.forEach(function(product, i) {
+				expect(nfceObj.produtos[i].unidade).to.equal(product.unidade);
+			});
+			done();
+		});
+		it('unidadeComercial', function(done) {
+			expect_data.produtos.forEach(function(product, i) {
+				expect(nfceObj.produtos[i].unidadeComercial).to.equal(product.unidadeComercial);
+			});
+			done();
+		});
+		it('unidadeTributavel', function(done) {
+			expect_data.produtos.forEach(function(product, i) {
+				expect(nfceObj.produtos[i].unidadeTributavel).to.equal(product.unidadeTributavel);
+			});
+			done();
+		});
+		it('valor', function(done) {
+			expect_data.produtos.forEach(function(product, i) {
+				expect(nfceObj.produtos[i].valor).to.equal(product.valor);
+			});
+			done();
+		});
+		it('valorAproxTributos', function(done) {
+			expect_data.produtos.forEach(function(product, i) {
+				expect(nfceObj.produtos[i].valorAproxTributos).to.equal(product.valorAproxTributos);
+			});
+			done();
+		});
+		it('valorICMS', function(done) {
+			expect_data.produtos.forEach(function(product, i) {
+				expect(nfceObj.produtos[i].valorICMS).to.equal(product.valorICMS);
+			});
+			done();
+		});
+		it('valorUnitarioComercial', function(done) {
+			expect_data.produtos.forEach(function(product, i) {
+				expect(nfceObj.produtos[i].valorUnitarioComercial).to.equal(product.valorUnitarioComercial);
+			});
+			done();
+		});
+		it('valorUnitarioTributavel', function(done) {
+			expect_data.produtos.forEach(function(product, i) {
+				expect(nfceObj.produtos[i].valorUnitarioTributavel).to.equal(product.valorUnitarioTributavel);
+			});
+			done();
+		});
+	});
 
 	describe('NFCe-impostos', function() {
 		it('baseICMS', function(done) {
